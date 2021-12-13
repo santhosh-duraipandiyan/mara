@@ -1,0 +1,29 @@
+<?php include_once 'codebase/reflex.php' ?>
+<!doctype html>
+<html>
+<head>
+   <TITLE></TITLE>
+   <META NAME="description"  CONTENT="">
+   <META NAME="keywords" CONTENT="">
+   <META NAME="cms_frame" CONTENT="">
+   <META NAME="cms_hide" CONTENT="">
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; utf-8">
+   <META NAME="GENERATOR" CONTENT="Mara cms">
+   <META NAME="Author" CONTENT="">
+</head>
+
+<body >
+<h1>Main Heading</h1>
+<blockquote>
+<p>This shows how to create levels and sublevels in your document using the Heading (n) tags to create larger text for headings, and the blockquote tag to indent subsections rightward from the heading. This section is under a H1 tag, which gives the largest heading text. </p>
+<h2>Sub Heading</h2>
+<blockquote>
+<p>The next section is under a smaller H2 heading , and the blockquote inceases the margin width. The amount of indent on each step would be controlled by your frame's stylesheet. </p>
+<h3>Nested Subsection</h3>
+<blockquote>
+<p>This nested subsection is under an H3 heading line, and the nested blockquote doubles the indentation.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</body>
+</html>

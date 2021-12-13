@@ -1,0 +1,447 @@
+/* --- soft fonts --- */
+
+@font-face {
+    font-family: cms_sans;
+    src: url('font/merge_light.woff');
+}
+
+/* --- global styles --- */
+
+BODY {color:black; background-color:#888; font-family:Arial,sans-serif;  margin : 0 0 0 0} 
+A {color:#0000ff; text-decoration:none; font-weight:normal;}
+A:hover {color:#00ffff;}
+A img {border:none;} /* Fix IE nastiness */
+
+P {text-align:justify;}
+
+/* --- Remove extraneous spacing from headers, optional but IMHO makes presentation much neater. --- */
+H1 {margin-top:0px; margin-bottom:0px; color:#000088; font-family:serif;font-variant:small-caps;}
+H2 {margin-top:0px; margin-bottom:0px;}
+H3 {margin-top:0px; margin-bottom:0px;}
+H4 {margin-top:0px; margin-bottom:0px;}
+H5 {margin-top:0px; margin-bottom:0px;}
+H6 {margin-top:0px; margin-bottom:0px;}
+
+/*  Deal with unruly content in editor which would tend to expand page beyond screen.. */
+img, pre {max-width:100%; overflow:hidden; text-overflow:ellipsis;}
+pre:hover {overflow:auto;}
+
+/* --- content panes --- */
+
+div.table {display:table;}
+div.tr {display:table-row}
+div.td {display:table-cell}
+
+div.cms_pagecontainer{
+  display:block;
+  background:#888;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  width:100%;
+  min-height:100%;
+}
+
+div.cms_outerpagelayout{
+  background:#fff;
+  border:0px;
+  padding:0px;
+  margin:auto;
+  vertical-align:top;
+  box-shadow: 3px 3px 2px 4px #111;
+}
+
+div.cms_pagelayout{
+  background:#fffff8;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  width:100%;
+  vertical-align:top;
+}
+
+#cms_banner{
+  background:#455 url('banner_bg.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding: 10px 20px 15px 15%;
+  margin:0px;
+  width:100%;
+  max-width:100%;
+  vertical-align:middle;
+  height:55px;
+}
+ #cms_toplogo {
+   width:250px;
+ }
+
+#cms_iwrc{display:none;}
+
+#cms_top{
+  width:100%;
+  background-color:#223; 
+  line-height:20pt;
+}
+
+#cms_widgets{
+  text-align:right;
+  margin-right:2px;
+}
+
+
+/* Default is a full-width content area with a top menu, and no sidebars. 
+   This should ensure at least a readable display in browsers that don't understand css3.
+   If the browser is so old that it can't understand the dropdown menu, then the sitemap is available for nav. */
+#cms_topmenu {display:block;}
+#cms_quicklinks {display:none;}
+#cms_left {display:none;}
+
+#cms_content{
+ font-family: cms_sans,Arial,sans-serif;
+ vertical-align:top;
+ text-align:justify;
+ padding:5px;
+ margin:0px;
+ min-width:200px;
+ max-width:95%;
+ max-width:93vw;
+}
+
+/* Only shown on large screens.. */
+#cms_right{display:none;}
+
+/* -- Responsive stuff -- */
+
+/* Determine width for change to a larger banner .. */
+
+@media screen and (min-width: 700px) {
+ #cms_banner{
+  background:#455 url('banner_bg.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:110px;
+ }
+ #cms_toplogo {
+   width:500px;
+ }
+ #cms_top{
+  /* Use a contoured background when menu is likely to be a single line.. */
+  background-image:url("bar.gif");
+  background-position: left top ;
+  background-repeat:repeat-x;
+ }
+}
+
+/* Determine the width at which we switch over to a sidebar menu .. */
+@media screen and (min-width: 900px) {
+  #cms_left{
+    display:table-cell;
+    vertical-align:top;
+    width:150px;
+    min-width:150px;
+    max-width:250px;
+    padding:7px;
+  }
+  #cms_content{
+  /* We need to shrink the content-area width to allow for the extra column.. */
+    padding-left:15px;
+    padding-right:15px;
+    max-width:70vw;
+    max-width:calc(100vw - 215px);
+  }
+  #cms_topmenu {display:none;}
+  #cms_quicklinks {display:inline;}
+  #cms_iwrc{display:block;}
+}
+
+/* Determine the width at which the righthand column appears.. */
+@media screen and (min-width: 1200px) {
+  #cms_right{
+    /* Righthand full height bar, often unused */
+    display:table-cell;
+    vertical-align:top;
+    min-width:150px;
+    max-width:150px;
+  }
+ #cms_content{
+  /* We need to shrink the content-area width to allow for the two extra columns .. */
+  max-width:70vw;
+  max-width:calc(100vw - 430px);
+ }
+}
+
+/* Set an overall max content-pane width on very wide displays, 
+   to avoid text lines too long for easy reading..  */
+@media screen and (min-width: 1600px) {
+ #cms_content{
+   max-width:1270px;
+ }
+}
+
+@media screen and (max-width: 900px) {
+ #cms_widgets{
+   position:absolute;
+   top:2px;
+   right:2%;
+ }
+}
+
+#rhslinks {
+  background: #f8f8f4; 
+  margin: 7px 10px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 2px 3px 3px #443;
+  font-weight:bold;
+}
+#rhslinks a {display:block;}
+
+#rhsbanner {
+  text-align:center;
+  margin-top:50%;
+}
+
+#rhsbanner img {
+  border: 1px ridge #aaa;
+  border-radius: 7px;
+}
+
+#cms_bottom{
+  text-align:center;
+  vertical-align:middle;
+}
+
+#socsites {
+  text-align:center;
+  margin: 40px auto 0px auto;
+}
+
+#socsites img {
+  border-radius:5px;
+  background:gray;
+  box-shadow: 3px 3px 4px #222;
+  margin:4px;
+  padding:0px;
+  border:none;  
+}
+
+#socsites img:hover {
+ margin: 6px 2px 2px 6px;
+ background:none;
+ box-shadow:none;
+}
+
+.callout{
+color:#ffffff;
+font-size:10px;
+text-align:center;
+padding:4px 3% 4px 3%;
+margin:5%;
+border-radius:6px;
+background:#444;
+}
+
+/* Add any styles you need for the captioned image function. These are nonessential. */
+/* Table styling applies to text above or below image. /*
+
+img.cms_captioned_img {
+}
+
+table.cms_captioned_img {
+}
+
+/* Image zoom functionality. These styles are nonessential, essential styles being in system.css */
+#cms_imgzoom_zdiv {
+  background-color: #000044;
+	border: 5px solid #000044;
+  border-bottom:0px;
+    border-radius: 5px ; 
+	padding: 0px;
+    opacity:1;
+    box-shadow: 4px 6px 5px #223;
+}
+
+#cms_imgzoom_zimage{
+    border:none;
+    border-radius: 5px; 
+}
+
+/* -- Menu styling -- */
+
+.sidemenu{
+  border-collapse:collapse;
+  background: #222;
+  border-radius: 3px;
+  padding: 5px 0px 5px 5px;
+  width:100%;
+  margin:0px;
+  border:0px;
+  box-shadow: 3px 4px 5px #332;
+}
+
+.topmenu {
+ float:left;
+}
+
+.menutree a {
+  display:block;
+  color: #e0ffff;
+  font-family: Tahoma, Verdana, sans-serif; 
+  font-size: 14px;
+  border-width:0px;
+  border-radius:7px;
+ } 
+
+.menutree a:hover { 
+  color: #00ff00;
+  font-family: Tahoma, Verdana, sans-serif; 
+  background: #223322;
+ } 
+
+.menutree a.menu_open { 
+  color: #FFff88;
+  font-weight:bold;
+ }  
+ 
+.menutree a.menu_open:hover { 
+  color: #33ff00;
+ } 
+
+.topmenu a.menu_dropdown, .topmenu a.menu_single {
+  /* top line of items in dropdown menu */
+  display:inline;
+  color: #e0ffff;
+  border-width:1px;
+  border-radius:7px;
+  padding: 2px 18px;
+ } 
+
+.topmenu a.menu_dropdown:hover, .topmenu a.menu_single:hover {
+ color:#aaffaa; 
+}
+
+.menutree div{
+  /* Sets indent depth and spacing for submenus.. */
+  margin-left:8px;
+  line-height:18px; 
+}
+
+.menutree div.menu_dropdown {
+  margin-top:4px; /* Spacing of dropdown away from menu bar */
+  background:black;
+  display:none;
+  position:absolute;
+  border:1px solid black;
+  border-radius:7px;
+  padding: 5px;
+ } 
+
+
+.menutree a.menu_closed {
+background-repeat:no-repeat;
+background-image: url('menu_img/closed.gif');
+padding-left:18px;
+display:block;
+}
+
+.menutree a.menu_open {
+  background-repeat:no-repeat;
+  background-image: url('menu_img/open.gif');
+  padding-left:18px;
+  display:block;
+}
+
+.menutree a.menu_selected {
+  background-repeat:no-repeat;
+  background-image: url('menu_img/selected.gif');
+  padding-left:18px;
+}
+
+.menutree a[href^=http]{
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-image: url('menu_img/external.gif');
+  padding-left:18px;
+}
+
+.topmenu a[href^=http]{
+  /* modifies default external link */
+  background-image: none;
+  background-position:right center;
+  padding-right:18px;
+}
+
+.menutree a[href$='.pdf']{
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-image: url('menu_img/pdf.gif');
+  padding-left:18px;
+}
+
+.topmenu a[href$='.pdf']{
+  /* modifies default pdf link */
+  background-position:right center;
+  padding-right:18px;
+}
+
+
+.menutree div.menu_closed {
+  display:none;
+}
+
+.menutree div.menu_open {
+  display:block;
+}
+
+
+/* Widget (righthand menu bar buttons) styles */
+
+button.widget {
+  color:white;
+  font-weight:bold;
+}
+
+#thememenu a{
+  color:white;
+  font-size:12px;
+  vertical-align:4px;
+  margin: 0px 4px;
+  padding:1px 5px;
+}
+
+
+#thememenu a:hover{
+  color:white;
+  background:#333;
+  border-radius:3px;
+  box-shadow:2px 3px gray;
+}
+
+#thememenu a.active_theme{
+ color:#8dd;
+}
+
+/* Make menus more compact on tiny screens.. */
+@media screen and (max-width: 500px) {
+  .topmenu a.menu_dropdown, .topmenu a.menu_single {
+    /* top line of items in dropdown menu */
+    border-width:1px;
+    border-radius:7px;
+    padding: 2px 8px;
+  } 
+}
+
+/* Plugin styles */
+
+div.captcha { 
+ text-align:center;
+ padding:5px;
+ border-radius:5px;
+ background:#dddddd;
+ width:400px;
+}
+
+
+
+

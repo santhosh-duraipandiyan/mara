@@ -1,0 +1,406 @@
+/* --- soft fonts --- */
+
+@font-face {
+    font-family: cms_sans;
+    src: url('font/merge_light.woff');
+}
+
+/* --- global styles --- */
+
+BODY {background: #777; color:black;} 
+
+A {text-decoration:none; color:blue;}
+A:hover {color:red;}
+A img {border:none;} /* Fix IE nastiness */
+
+img{
+ border-radius:3px;
+}
+
+/* --- content panes --- */
+
+
+div.cms_pagecontainer{
+ width:100%;
+ max-width:1680px; 
+ min-width:380px;
+ margin:auto;
+ background: white;
+ box-shadow: 1px 3px 2px 4px #111;
+}
+
+ #cms_banner{
+  color:#ABD761;
+  background: #326 url('large-banner.jpg');
+  width:100%;
+  height:100vh;
+  max-height:100vw;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  vertical-align:top;
+  margin:0px;
+  padding: 0px;
+  border:2px solid gray;
+ }
+ 
+ #cms_banner_splash {
+  border:none;
+  text-align:center;
+  width:50%;
+  position:absolute;
+  top: 30%;
+  left:20%;
+  min-width:200px;
+  display:block;
+ }
+ #cms_banner_splash span{
+  text-align:center;
+  display:inline-block;
+  margin-left:12%;
+  width:25%; 
+ }
+ #cms_banner_splash a{
+  font-size:24px;
+  color:black;
+  border: 1px solid black;
+  border-radius:5px;
+  padding:10px;
+  margin:0px ;
+ }
+ #cms_banner_splash a:hover{
+  color:white;
+  border: 1px solid white;
+ }
+ #cms_banner_splash img{
+  width:100%;
+  display:block;
+ }
+
+
+#cms_widgets{
+  position:relative;
+  float:right;
+  top:90%;
+  margin-right:30px; 
+}
+
+#cms_top {
+  display:block;
+  color:white;
+  background:black;
+  min-height:3px;
+  vertical-align:middle;
+  padding:5px 10px 0px 0px;
+}
+
+
+#cms_content{
+ font-family:cms_sans,Arial,sans-serif;
+ color:black;
+ margin:3px auto; 
+ width:100%;
+ clear:both;
+}
+
+p {
+  text-align:justify;
+  margin: 15px 10%;
+}
+
+div.multi {
+ display:inline-block;
+ width:85%;
+ margin:15px 0px 20px 8%;
+}
+
+div.multi p {
+ margin: 0px 15px;
+}
+
+div.multi p:first-child::first-letter {
+  font-weight:bold;
+}
+
+
+p.fwimg {
+  font-size:10px;
+  text-align:center;
+  width:98%;
+  display:inline-block;
+  overflow:hidden;
+  margin: 0px auto ;
+}
+
+img.fwimg {
+  text-align:center;
+  display:inline-block;
+  overflow:hidden;
+  border:2px solid gray;
+  margin: 4px ;
+}
+
+#patimg {
+  background:gray;
+  box-shadow: 2px 2px 3px #222;
+}
+
+#patimg:hover {
+  border-radius:0px;
+  box-shadow:none;
+}
+
+
+
+#cms_content h1 {
+  text-align:justify;
+   /* width:82%; */
+  margin: 5px auto 5px auto;
+}
+
+#cms_content h1,#cms_content h2,#cms_content h3,#cms_content h4,#cms_content h5,#cms_content h6 {
+  text-align:justify;
+  width:85%;
+  margin: 20px auto 5px auto;
+}
+
+
+#cms_bottom{
+  clear:both;
+  height:15px;
+  background: #500;
+  color:#cc0;
+  font-size:10px;
+  width:100%;
+  text-align:center;
+  vertical-align:middle;
+}
+
+.index_bullets {
+  display:inline-block;
+  text-align:center;
+  width:99.5%
+}
+
+.index_bullets div {
+  display:inline-block;
+  width:46%;
+  margin: 0px -2%;
+}
+
+.index_bullets div div {
+  display:inline-block;
+  width:44%;
+  min-width:140px;
+  margin:0px 0px;
+}
+
+.index_bullets div div div {
+    min-width:150px;
+    width:150px;
+    height:150px;
+    font-weight:bold;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    border:3px #ff8 solid;
+    border-radius:100px;
+    background:#006;
+    background: radial-gradient(#006 , #004 );
+    color:white;
+}
+
+/* Add any styles you need for the captioned image function. These are nonessential. */
+/* Table styling applies to text above or below image. /*
+
+img.cms_captioned_img {
+}
+
+table.cms_captioned_img {
+}
+
+/* Image zoom functionality. These styles are nonessential, essential styles being in system.css */
+#cms_imgzoom_zdiv {
+    opacity:1;
+    border-radius: 10px; 
+    box-shadow: 6px 6px 3px #888;
+    background:black; 
+}
+
+#cms_imgzoom_zdiv img {
+    border-radius: 10px; 
+}
+
+#cms_imgzoom_zimage{
+}
+
+
+
+/* -- Menu styling -- */
+
+
+.topmenu {
+ margin-top:4px;
+ float:left;
+ z-index:9999;
+}
+
+.topmenu div{
+  background:#333;
+  border: 1px solid gray;
+  border-radius:5px;
+  padding:4px;
+  box-shadow: 6px 6px 5px  #111;
+}
+
+.menutree a {
+  padding:1px;
+  color: #ee7;
+} 
+
+.menutree a:hover { 
+   color:white;
+   background: #665;
+   border-radius:5px;
+} 
+
+.topmenu{
+  margin:30px;
+  font-size:20px;
+  color:black;
+}
+
+.topmenu a:hover{
+  border:1px solid white;
+  background:none;
+}
+
+.topmenu a.menu_dropdown, .topmenu a.menu_single {
+  /* top line of items in dropdown menu */
+ margin: 0px 5px;
+ vertical-align:middle;
+ padding:4px 12px;
+ color: black;
+ font-size:24px;
+ border-radius:5px;
+ } 
+
+.topmenu a.menu_dropdown:hover, .topmenu a.menu_single:hover {
+  color:white;
+}
+
+.topmenu .menu_dropdown {
+  cursor: cell;
+}
+
+.menutree div{
+  /* Sets indent depth for submenus.. */
+  margin-left:16px;
+}
+
+
+.menutree a.menu_closed {
+  color:#ffd;
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/plus.gif');
+  padding-right:15px;
+  cursor:cell;
+}
+
+.menutree a.menu_open {
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/minus.gif');
+  padding-right:15px;
+  cursor:ns-resize;
+}
+
+.menutree a.menu_selected {
+ color:#fff;
+  background: linear-gradient(90deg, #a00,#400); 
+}
+
+.menutree a[href^=http]{
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/external.gif');
+  padding-right:15px;
+}
+
+
+.menutree a[href$='.pdf']{
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/pdf.gif');
+  padding-right:18px;
+}
+
+
+/* Widget (righthand menu bar buttons) styles */
+
+button.widget {
+}
+
+#thememenu{
+
+}
+
+#thememenu a{
+  color:white;
+  font-size:10px;
+  margin:5px;
+  vertical-align:25%;
+}
+
+
+#thememenu a:hover{
+ color:yellow;
+}
+
+#thememenu a.active_theme{
+ color:#8dd;
+}
+/* Plugin styles */
+
+div.captcha { 
+}
+
+
+
+@media (max-width:850px){
+ #cms_banner{
+  color:#ABD761;
+  background: #326 url('narrow-banner.jpg');
+  width:100%;
+  height:250px;;
+  max-height:250px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  vertical-align:top;
+  margin:0px;
+  padding: 0px;
+ }
+ 
+ #cms_banner_splash {
+  top: 105px;
+  left:21%;
+  min-width:120px;
+ }
+
+ #cms_banner_splash a{
+  font-size:12px;
+  color:#ccc;
+  border: 1px solid gray;
+  border-radius:5px;
+  padding:6px;
+  margin:0px;
+ }
+ 
+ #cms_widgets{
+   display:none;
+ }
+}

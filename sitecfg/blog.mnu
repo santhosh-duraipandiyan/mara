@@ -1,0 +1,4 @@
++[Recent Articles
+Blog Index=blog/index.php=A list of articles, ordered by date of first posting
+Your first blog post=blog/first_article.php=Put a description of your blog post here, of up to 200 characters, in a single paragraph. It will show in the blog frontpage listing, in a smaller font, under the title. 
+]

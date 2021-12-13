@@ -1,0 +1,11 @@
+Mara 7.5:
+
+Race hazard causing partial upload of media fixed. (Uploader briefly signalling 'idle' between uploads could be taken as completion on slow processor. Flag changed to 'alldone' to avoid ambiguity.) 
+
+CK updated to 4.11.1 (4.9 also provided in case of any compatibility issues with existing sites - Just rename folders.) 
+
+Media handing - .svg graphics file capability added. 
+
+Added inclusion of js and css from the page head. 
+ This can be turned off in siteini.php if necessary, it's the phjscss item in [site] 
+ -If it's not needed, turning off will save a little on page load time and processor usage. 

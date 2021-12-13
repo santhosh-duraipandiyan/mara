@@ -1,0 +1,242 @@
+
+/* --- global styles --- */
+
+BODY {background: #777; color:white;} 
+
+A {text-decoration:none; color:yellow;}
+A:hover {color:red;}
+A img {border:none;} /* Fix IE nastiness */
+
+P {text-align:justify;}
+
+/*  Deal with unruly content in editor which would tend to expand page beyond screen.. */
+img, pre {max-width:100%; overflow:hidden; text-overflow:ellipsis;}
+pre:hover {overflow:auto;}
+
+/* --- content panes --- */
+
+#cms_pagecontainer{
+ max-width:98%;
+ width:100%;
+ margin:auto;
+ padding:10px 10px 10px 15px;
+ background:#221;
+}
+
+#cms_banner{
+ color:#ABD761;
+ padding:5px 0px 0px 30px;
+}
+
+#cms_top{
+  color:white;
+  background:brown;
+}
+
+#cms_widgets {
+  text-align:right;
+}
+
+#cms_midsection {
+ display:inline-block;
+ clear:both;
+ max-width:inherit;
+}
+
+#cms_left{
+  display:none;
+  float:left;
+  height:100%;
+  width:150px;
+  text-align:center;
+  margin: 30px 0px;
+}
+
+#cms_left img{
+  border:outset 2px #674;
+  margin:auto;
+  padding:10px;
+  background: #333;
+  box-shadow: 6px 6px 5px 0px #aaa;
+}
+
+#cms_content{
+ color:white;
+ margin:0px ;
+}
+
+#cms_bottom{
+  clear:both;
+  height:15px;
+  background: #500;
+  color:#cc0;
+  font-size:10px;
+  width:100%;
+  text-align:center;
+  vertical-align:middle;
+}
+
+
+/* Add any styles you need for the captioned image function. These are nonessential. */
+/* Table styling applies to text above or below image. /*
+
+img.cms_captioned_img {
+}
+
+table.cms_captioned_img {
+}
+
+/* Image zoom functionality. These styles are nonessential, essential styles being in system.css */
+#cms_imgzoom_zdiv {
+    opacity:1;
+    border-radius: 10px; 
+    box-shadow: 6px 6px 3px #888;
+    background:black; 
+}
+
+#cms_imgzoom_zdiv img {
+    border-radius: 10px; 
+}
+
+#cms_imgzoom_zimage{
+}
+
+
+
+/* -- Menu styling -- */
+
+
+.topmenu {
+ float:left;
+ z-index:9999;
+}
+
+.topmenu div{
+  background:#333;
+  border: 1px solid gray;
+  border-radius:5px;
+  padding:4px;
+  box-shadow: 6px 6px 5px  #111;
+}
+
+.menutree a {
+  padding:1px;
+  color: #ee7;
+} 
+
+.menutree a:hover { 
+   color:white;
+   background: #665;
+   border-radius:5px;
+} 
+
+
+.topmenu a.menu_dropdown, .topmenu a.menu_single {
+  /* top line of items in dropdown menu */
+ margin:0px 0px;
+ vertical-align:middle;
+ padding:1px 5px;
+ color: white;
+ font-size:14px;
+ } 
+
+.menutree div{
+  /* Sets indent depth for submenus.. */
+  margin-left:16px;
+}
+
+
+.menutree a.menu_closed {
+  color:#ffd;
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/plus.gif');
+  padding-right:15px;
+}
+
+.menutree a.menu_open {
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/minus.gif');
+  padding-right:15px;
+
+}
+
+.menutree a.menu_selected {
+ color:#fff;
+  background: linear-gradient(90deg, #a00,#400); 
+}
+
+.menutree a[href^=http]{
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/external.gif');
+  padding-right:15px;
+}
+
+
+.menutree a[href$='.pdf']{
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-image: url('menu_img/pdf.gif');
+  padding-right:18px;
+}
+
+
+/* Widget (righthand menu bar buttons) styles */
+
+button.widget {
+}
+
+#thememenu{
+
+}
+
+#thememenu a{
+  color:white;
+  font-size:10px;
+  margin:5px;
+  vertical-align:25%;
+}
+
+
+#thememenu a:hover{
+ color:yellow;
+}
+
+#thememenu a.active_theme{
+ color:#8dd;
+}
+/* Plugin styles */
+
+div.captcha { 
+}
+
+/* ********** Responsive stuff ********** */
+
+@media screen and (max-width:550px) {
+ #cms_widgets {
+  position:absolute;
+  top:15px;
+  right:10px;
+ }
+}
+
+
+@media screen and (min-width:1025px) {
+ #cms_pagecontainer{
+  max-width:1024px;
+  margin:auto;
+  background:#221;
+  background: linear-gradient(180deg, #443,#111); 
+  box-shadow: 1px 3px 2px 4px #111;
+ }
+ #cms_content{
+   float:left; 
+   width:840px;
+ }
+ #cms_left{
+   display:block;
+ }
+}
+

@@ -1,0 +1,222 @@
+/* Default styles, some of which are necessary for correct function. These can be replaced or added-to for a specific website. */
+#cms_gallery_underlay {
+    /* Backdrop to slideshow. Set opacity to 1 to hide the underlying page */
+    position:fixed; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:9900; 
+    opacity:.95; 
+    background:#111;
+}    
+
+#cms_gallery_spinner{
+    /* 'Please wait' indicator */
+    visibility:hidden;
+    display:inline-block;
+    background:#111;
+    position:fixed; 
+    top:45%;
+    left:45%;
+    width:85px;
+    height:85px;
+    border: 2px outset #222;
+    border-radius: 30px;
+    opacity:1;
+    z-index:21000;
+    text-align:center;
+    vertical-align:middle;
+}    
+
+#cms_gallery_spinner img{
+    margin-top:12px;
+}
+
+#cms_gallery_zdiv {
+    /* Layer on which slideshow is presented */
+    background:none;
+    text-align:center;
+    vertical-align:middle;
+    position: fixed;
+    visibility: hidden;
+    margin:0px;
+    top:0px;
+    left:0px;
+    z-index:9999; 
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+#cms_gallery_zdiv img {
+/* Prevent inherited css from interfering with image zoom */
+ background:none;
+ border:none;
+ box-shadow:none;
+ padding:0px;
+ border:none;
+}
+
+#cms_gallery_zimage{
+    /* The slideshow image itself. You can add a wider border, shadow, rounded corners, etc here. */
+    max-width:7200px; /* To override any max-width setting on the website itself */
+    vertical-align:middle;
+    z-index:9999; 
+    opacity:1;
+    border:2px solid black; 
+    overflow:auto;
+}
+
+
+/* No collapse of thumbs on small screens */
+a.cms_gallery img {
+  display:inline-block !important;
+}
+
+#cms_gallery_controls {
+  /* The outer container for the control panel. Not normally visble.  */
+  border: none;
+  width:99%;
+  opacity:0;
+  text-align:center;
+  position:fixed;
+  bottom:10px;
+}
+
+#cms_gallery_controls div{
+  /* The frame of the slideshow control panel */ 
+  border: 1px solid gray;
+  min-width:40%;
+  text-align:center;
+  border-radius:10px;
+  background:#112;
+  box-shadow:2px 4px 4px #111;
+}
+
+#cms_gallery_controls div img{
+  /* Stop external css from interfering with buttons.. */
+  margin:0px;
+  padding:0px;
+  box-shadow:none;
+  border:none;
+  display:inline-block !important;
+}
+
+#cms_gallery_controls:hover {
+  width:99%;
+  opacity:1;
+  text-align:center;
+}
+
+.cms_gallery_button {
+  /* Slideshow control panel buttons */
+  text-align:center;
+  vertical-align:middle;
+  color:white;
+  max-width:50px;
+  width:7%;
+  margin: 0px;
+  display:inline-block !important;;
+}
+
+#cms_gallery_ordinal {
+ /* The slide number */
+ font-size:150%;
+ display:inline-block;
+ min-width:14%;
+}
+
+#cms_gallery_slower {
+  vertical-align:middle;
+  font-size:12pt;
+  color:white;
+  width:4%;
+  max-width:30px;
+  margin-right: -10px;
+  z-index:10000;
+}
+
+#cms_gallery_faster {
+  vertical-align:middle;
+  font-size:12pt;
+  color:white;
+  width:4%;
+  margin-left: -10px;
+  z-index:10000;
+}
+
+.cms_gallery_overlaybutton{
+    /* The larger, separate buttons which appear then the mouse is over their respective areas */
+    opacity:0;
+    border:none;
+    background:none;
+    text-align:center;
+    vertical-align:middle;
+    position: fixed;
+    font-size:100px;
+    top:5%;
+}
+
+.cms_gallery_overlaybutton:hover {
+    opacity:.6;
+    color:white;
+    border: 2px dotted gray ;
+}
+
+#cms_gallery_prevbutton {
+    font-size:50pt;
+    width:14%;
+    height:60%;
+    top:18%;
+    left:1%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#cms_gallery_nextbutton {
+    font-size:50pt;
+    width:14%;
+    height:60%;
+    top:18%;
+    right:1%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cms_gallery_topbutton {
+    /* General properties of top zoom and close buttons */
+    color:white;
+    opacity:0;
+    background:#112;
+    text-align:center;
+    vertical-align:middle;
+    position: fixed;
+    font-size:30pt;
+    width:10%;
+    height:10%;
+    top:2%;
+    border-radius:10px;
+}
+
+#cms_gallery_topzoombutton {
+    right:12%;
+}
+
+#cms_gallery_topclosebutton {
+    /* Set opacity to .2 or higher if you'd prefer a permanent close button, 0 if you prefer it to be hidden until mouseover. */
+    opacity: .3;
+    right:2%;
+}
+
+#cms_gallery_topzoombutton:hover {
+   background: #000 url('buttons/zoom0.png');
+   background-repeat:no-repeat;
+   background-size:50%;
+   background-position:center;
+   opacity:.8;
+}
+
+#cms_gallery_topclosebutton:hover {
+   opacity:.8;
+}
+

@@ -1,0 +1,31 @@
+<?php include_once 'codebase/reflex.php' ?>
+<!doctype html>
+<html>
+<html>
+<head>
+   <TITLE></TITLE>
+   <META NANE="description"  CONTENT="">
+   <META NAME="keywords" CONTENT="">
+   <META NAME="cms_frame" CONTENT="">
+   <META NAME="cms_menu" CONTENT="">
+   <META NAME="cms_hide" CONTENT="">
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; utf-8">
+</head>
+
+<body>
+<h1>A page using galleries</h1>
+
+<p>A page containing multiple galleries can be useful when you want to provide descriptive images for your writeup, but without going through the lengthy process of linking each image individually. Each gallery call is a relatively simple piece of php scripting, and loads all of the images in one disk location. </p><p> If you add more images to the galleries, they are automatically included with no need to adjust the page.  The images in this example are loaded from the 'img/gallery/session1' and 'img/gallery/session2' locations. You can change these locations in the page source, or add up to as many as 255 galleries. </p>
+
+<?php 
+include_once(plugin('gallery'));
+gallery_browser("img/gallery/session1",10,"80px");
+?>
+
+<p>Type some text here</p>
+
+<?php gallery_browser("img/gallery/session2",10,"80px"); ?>
+
+<p>Some more text here</p>
+
+</body>

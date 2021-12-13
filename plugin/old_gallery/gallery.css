@@ -1,0 +1,79 @@
+/* Defines 'grayout' over browser when in slideshow mode */
+div#gallery_overlay
+{
+    background:#002;
+    opacity:0.5;
+}    
+
+/* Thumbs in image browser */
+img.cms_gallery{
+  border:3px ridge black;
+  border-radius:5px;
+  box-shadow: 2px 3px 2px 3px #003;
+  margin:5px;
+}
+
+img.cms_gallery:hover{
+  box-shadow: 0px 0px 4px 3px #ffa;
+  border-radius:7px;
+}
+
+
+/* Defines popup window used for large image view */
+#cms_gallery_zdiv {
+    background-color: #555555;
+	border: 3px solid #000044;
+    border-radius: 15px 15px 15px 15px; 
+	padding: 10px;
+	padding-bottom: 5px;
+  box-shadow: 2px 2px 6px 6px #001;
+}
+
+/* Slideshow/zoomed image */
+#cms_gallery_zimage{
+    border-radius: 15px 15px 15px 15px; 
+}
+
+/* Lefthand status area of slideshow toolbar*/
+#cms_gallery_status{
+  font-size:12px;
+  color:#aaa;
+}
+
+/* Buttons in slidehow */
+.cms_gallery_button {
+border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 1px 2px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffc;
+   font-size: 12px;
+   font-family: Verdana, Arial;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.cms_gallery_button.active {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.cms_gallery_button.hover {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
+#cms_gallery_count {
+   font-size: 12px;
+   font-family: Verdana, Arial;
+   color:#ccc;
+}

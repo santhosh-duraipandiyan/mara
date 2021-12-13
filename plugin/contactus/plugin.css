@@ -1,0 +1,53 @@
+
+#cf_outer{
+ margin: 3px 5%;
+}
+
+#cf_outer h4{
+ margin: 0px;
+}
+
+#cf_antirobot  {
+  width:100%;
+  margin-top:30px;
+  display:inline-block;
+}
+
+#cf_antirobot div.captcha {
+  display:inline-block;
+}
+
+#cf_antirobot div.inputboxdiv {
+  display:inline-block;
+  float:left;
+  margin-right:8%;
+
+  margin-bottom:5px;
+}
+
+#cf_sender{
+  display:inline-block;
+  float:left;
+  margin-right:8%;
+  margin-top:5px;
+}
+
+#cf_message{
+  margin-top:10px;
+  display:inline-block;
+}
+
+#cf_message .button{
+  text-align:center;
+  color:white;
+  background:#223;
+  border:1px solid black ;
+  border-radius:5px;
+  box-shadow: 3px 2px 1px gray;
+  margin: 3px 30%;
+}
+
+#cf_message .button:hover{
+  box-shadow: none;
+  margin: 4px 30% 2px 30%;
+}

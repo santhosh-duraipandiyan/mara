@@ -1,0 +1,7 @@
+"caption":"Caption"
+"wordWrap":"Word Wrap"
+"alignLeft":"Left",
+"alignRight":"Right"
+"alignCenter":"Centre"
+"advisoryTitleInputLabel":"Advisory Title"
+"alignBottom":"Bottom"

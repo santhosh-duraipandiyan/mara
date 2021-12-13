@@ -1,0 +1,34 @@
+<?php include_once 'codebase/reflex.php' ?>
+<html>
+<head>
+  <title>Contact Us</title>
+</head>
+<body>
+<h1>Contact Form</h1>
+<?php
+
+// set the delivery parameters to suit your email system:
+// Note that the '@' and the '.' between 'example' and 'com' are added automatically.  
+// syntax is setg('variable','value','context') -so you change the middle item. 
+
+setg('preamble','Please fill in this form if you wish to make an enquiry or request a quote for specific work.','contactus');
+setg('postscript','We typically expect to reply to email enquiries within one working day. <br>If you require more urgent help with a mission-critical problem, please telephone us.','contactus');
+setg('our_telephone','01 1234 567','contactus');
+setg('domain_name','example','contactus');
+setg('toplevel_domain','com','contactus');
+setg('form_mail_account','webform','contactus');
+setg('direct_mail_account','webform','contactus');
+setg('subject','Website Enquiry','contactus');
+
+include(plugin('contactus'));
+
+contactus_drawform();
+echo "<hr />Alternatively you can " . contactus_launch_mailclient('email us') ;
+echo " directly on " . contactus_show_email('this address') . " or call us on " . contactus_show_tel('this number') . " if you prefer.<br>" ;
+?>
+<sub><br> I understand that my email address and phone number may be stored for the purpose of contacting me in future. 
+They will not however be added to any mailing lists, or given to any other organisation <i>unless</i> 
+that organisation has a valid reason to contact you in relation to your enquiry. </sub>
+
+</body>
+</html>

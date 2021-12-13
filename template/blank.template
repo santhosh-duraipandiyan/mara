@@ -1,0 +1,8 @@
+<?php include_once 'codebase/reflex.php' ?>
+<p>
+A completely blank template apart from this description, for a clean start. Type your text here, then delete this.
+</p>
+
+<p>
+This template does not have a document type declaration, head section or body tags, which Mara cms does not actually require. If you would ever need to display the template file directly in a browser for test purposes you might want to include those items, though. 
+</p>

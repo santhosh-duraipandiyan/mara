@@ -1,0 +1,424 @@
+/* --- global styles --- */
+
+/*
+html {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+*/
+
+BODY {
+ /* Get rid of default serif fonts.. */
+ font-family:Arial,sans-serif;
+} 
+
+A img {outline:none;} /* Fix IE dotted lines */
+
+/* Image and span container styles for Mara CK Image dialog */
+
+/*  General styles for all non-default images. */
+
+.float-left, .left, .center, .right, .float-right {
+  margin:8px; 
+  display:block;
+  border:none;
+}
+
+.left {
+  margin-right:auto !important;
+}
+.float-left {
+  float:left !important;
+}
+.center {
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.right {
+  margin-left:auto !important;
+}
+.float-right {
+  float:right !important;
+}
+
+.plain {
+  display: block;
+  margin-top:-1em;
+}
+
+
+/* Caption overlaying image, contrasting background. */
+
+img.autocaption-top+span, img.autocaption-mid+span, img.autocaption-low+span {
+  position:absolute;
+  left:-4000px;
+  display:flex;
+  border-collapse:collapse;
+  text-align:center;
+  overflow:hidden;
+  vertical-align:top;
+  opacity:0;
+  transition: opacity 1s ease;
+  /* border:1px solid red; */
+  margin:0px;
+  padding:0px;
+}
+
+img.autocaption-top+span {
+  font-size:16px;
+  align-items:flex-start;
+}
+
+img.autocaption-mid+span {
+  font-size:20px;
+  align-items:center;
+}
+
+img.autocaption-low+span {
+  font-size:16px;
+  align-items:flex-end;
+}
+
+
+span.autocaption-text {
+  box-sizing:border-box;
+  display:inline-block;
+  position:relative;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  word-wrap:break-word;
+  margin:2% auto;
+  padding:5px 7px;
+  width:auto;
+  max-width:95% !important;
+  max-height:95% !important;
+  text-align:center;
+  border-radius:5px;
+  color:white;
+  background:rgba(0, 0, 0, 0.5);
+  border:1px solid black;
+}
+
+
+img.autocaption-mid+span span{
+  background:none;
+  border:none;
+  box-shadow:none;
+  color:white;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
+span.autocaption {
+  position:relative;
+  text-align:center;
+  font-size:small;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin:4px;
+  box-sizing:border-box;
+}
+
+
+img.autocaption {
+  box-sizing:border-box;
+}
+
+img.autocaption-top+span:hover, img.autocaption-mid+span:hover, img.autocaption-low+span:hover {
+  z-index:-1;
+}
+
+img.autocaption-top:hover, img.autocaption-mid:hover, img.autocaption-low:hover {
+  z-index:3;
+}
+
+
+/* Small screen responsive stuff 
+   Note that we cannot cover all possibilites that may arise here, 
+   themes must also be checked for responsiveness */
+
+/* Prevent oversize images from breaking layout */
+/* (Maybe this should be left up to the theme?) */
+#cms_content img, #cms_content pre {max-width:100vw ; overflow:hidden; text-overflow:ellipsis;}
+pre:hover {overflow:auto;}
+
+.float-left, .float-right {
+  max-width:70vw ;
+}
+
+/* Center floated content regardless on small screens to avoid narrow text columns */
+
+@media (max-width:800px) {
+/* Maybe this should be left up to the theme? Works quite well but might clash with specific designs */
+ #cms_content {
+   max-width:98vw !important;
+   margin:0px auto !important;;
+   padding:1% !important;
+   box-sizing:border-box;
+ }
+
+ #cms_content table {
+   max-width:100vw !important;
+   overflow:auto;
+ }
+
+ #cms_content img {
+   max-width:98vw !important;
+   overflow:hidden;
+   height:auto !important;
+   margin:0px auto !important;
+   padding:0px !important;
+   float:none !important;
+   display:block 
+   box-sizing:border-box;
+ }
+
+}
+
+
+/*  -----------------------------------------------------     
+    Below this point, styling relates to the admin interface. 
+    Please do not alter unless you are sure.  
+    -----------------------------------------------------     
+*/
+
+/* Fix drag and drop bug in some browsers */
+#editable{
+ padding:10px;
+ margin:-10px;
+}
+
+
+/* Visual cue on pending uploads */
+img.inline {
+  border:2px dashed green;  
+}
+a.inline {
+  border:1px dashed green;  
+}
+video.inline {
+  border:2px dashed green;  
+}
+
+
+/* --- admin panes --- */
+
+textarea.cms_script {
+ width:1em;
+ height:1em;
+ background:red;
+ border-radius: 7px 0px 0px 0px;
+}
+
+/* User manager styles */
+
+table.cms_usrmgr {
+/*  original background: #4488aa; */
+  background:#112;
+  border-radius:10px;
+  border:1px solid;
+  padding:10px;
+  margin:auto;
+  box-shadow:1px 2px 2px 3px gray;
+}
+
+/* Image zoom functionality. These styles are necessary for correct function. */
+#cms_imgzoom_zdiv {
+    text-align:center;
+    vertical-align:middle;
+    position: fixed;
+    visibility: hidden;
+    margin:auto;
+    top:-10px;
+    left:-10px;
+    z-index:9999; 
+    cursor:zoom-out;
+}
+
+#adminbar  {
+/* Fixed toolbar at top of screen */
+   display:inline-block;
+   width:100%;  
+   height:30px;
+   line-height:30px;
+   background-image: url('img/admindiv_bg.png');
+   background-repeat:repeat-x;
+   vertical-align:middle;
+   position:relative;
+   top:0px;
+   left:0px;
+   padding:0px;
+   margin:0px;
+   font-size:16px;
+   color:yellow;
+   z-index:9000;
+   white-space:nowrap;
+}
+
+#adminbar a {
+ color:yellow;
+ padding:2px;
+ vertical-align:middle;
+ white-space:nowrap;
+}
+
+#adminbar a:hover {
+  color:white;
+}
+
+#adminbar input{
+  border:1px solid black;
+  border-radius:3px;
+  background:#ffffd0;
+  color:black;
+  padding:1px;
+  margin-top:2px;
+}
+
+#adminbar ul li {
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#adminbar li.admin_logo, #adminbar img.admin_logo {
+  border:none;
+  margin:0px 3% 0px 0px;
+  padding:0px;
+  vertical-align:middle;
+}
+
+@media (max-width:700px){
+  #adminbar li{
+    font-size:12px;
+  }
+  #adminbar img{
+    display:none;
+  }
+}
+
+#hypermsg {
+ margin-left:2%;
+ font-size:11px;
+}
+
+
+/* Mara admin menu styles. For the moment the admin bar still uses the legacy menu code. */
+
+
+#admin_nav {
+  position:relative;
+  top:5px;
+  left:3%;
+  margin:0;
+}
+
+#admin_nav, #admin_nav ul { /* all lists */
+	z-index:99999;
+	padding: 1px;
+	list-style: none;
+	line-height: 1;
+}
+
+#admin_nav a {
+	display: block;
+	width: 10em;
+}
+
+#admin_nav li { /* all list items */
+	float: left;
+	width: 8em ; /* width needed or else Opera goes nuts */
+}
+
+#admin_nav li ul { /* second-level lists */
+	position: absolute;
+	background: #333333;
+	width: 8em;
+	left: -999em; 
+}
+
+#admin_nav li ul ul { /* third-and-above-level lists */
+	margin: -1em 0 0 10em;
+}
+
+#admin_nav li:hover ul ul, #admin_nav li:hover ul ul ul, #admin_nav li.sfhover ul ul, #admin_nav li.sfhover ul ul ul {
+	left: -999em;
+}
+
+#admin_nav li:hover ul, #admin_nav li li:hover ul, #admin_nav li li li:hover ul, #admin_nav li.sfhover ul, #admin_nav li li.sfhover ul, #admin_nav li li li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+/* Very basic Page Thememenu styles. Included here so menu will work without css in theme.  */
+
+#thememenu {
+ display:none;
+ vertical-align:middle;
+ position:relative;
+}
+
+#thememenu a {
+ display:inline;
+ text-align:center;
+ text-decoration:none;
+ padding-right:6px;
+}
+
+/* Remove these two to use the previous inline style of theme list */
+ #thememenu  span {
+    display:block;
+    position:absolute ;
+    right:0px;
+    border:1px solid black;
+    border-radius:2px;
+    box-shadow: 1px 1px 1px 1px #222;
+    background: #444;
+    top:20px;
+    z-index:1;
+ }
+ #thememenu  span a {
+    color:white;
+    display:block;
+ }
+ 
+
+
+#cms_widgets{
+  border:none;
+  text-align:right;
+  vertical-align:middle; 
+  padding-right:5px;
+}
+
+.widget {
+  border:none;
+  margin: 0px ;
+  padding: 0px ;
+  background:transparent;
+  position:relative;
+  vertical-align:middle;
+}
+
+
+@media print {
+/* Force b/w printout on themes with coloured background */
+/* You might want to define specific print settings in your theme, just gives the basics here.  */
+  #cms_content {
+    display:block;
+    background-image:none;
+    background:white; color:black; 
+  }
+  #cms_banner, #cms_top, #cms_left, #cms_right, #cms_bottom {
+    display:none;
+  }
+}
+

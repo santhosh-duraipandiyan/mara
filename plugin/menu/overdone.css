@@ -1,0 +1,158 @@
+/* 
+Default page menu styles, minimal styling to ensure menus work even if theme has no css. 
+Only make customizations here if you want them to apply to all themes. 
+*/
+
+/* Burger menus (only active on small screens) */
+
+a.menu_burger {
+  display:inline-block;
+  position:relative;
+  z-index:10;
+  background:#444;
+  color:white;
+  float:left;
+  font-size:22px;
+  vertical-align:middle;
+  outline:none;
+  padding:0px 3px;
+  margin: 0px 2px;
+  border:1px solid black;
+  border-radius:3px;
+}
+
+.menu_hide {
+  display:none !important;
+}
+
+/* Top Menu */
+
+.topmenu {
+  position:relative;
+}
+
+.topmenu a {
+  text-decoration:none;
+  background-color:black;
+  background-repeat:no-repeat;
+  display:block;  
+  color:white;
+  padding:1px 2px;
+ } 
+
+.topmenu a.menu_dropdown, a.topmenu_single, .topmenu a.menu_single {
+  /* third item is for backward compatibility */
+  display:inline;
+  border-radius:3px;
+ } 
+
+.topmenu a.menu_dropdown {
+  cursor:grab; 
+}
+
+.topmenu div.menu_dropdown {
+  display:none;
+  position:absolute;
+  z-index:999;
+ } 
+
+.topmenu a.menu_closed {
+  display:block;
+  cursor:grab;
+}
+
+.topmenu a.menu_open {
+  display:block;
+  cursor:grab;
+}
+
+.topmenu div.menu_closed {
+  display:none;
+}
+
+.topmenu div.menu_open {
+  display:block;
+}
+
+
+
+/* Side Menu  */
+
+.sidemenu div{
+  /* Sets indent depth for submenus */
+  margin-left:.5em;
+}
+
+.sidemenu a {
+  text-decoration:none;
+  background-repeat:no-repeat;
+  display:block;
+ } 
+
+.sidemenu a.menu_dropdown, a.sidemenu_single, .sidemenu a.menu_single {
+  display:inline;
+ } 
+
+.sidemenu a.menu_dropdown {
+  cursor:grab; 
+}
+
+.sidemenu div.menu_dropdown {
+  display:none;
+  position:absolute;
+  z-index:999;
+ } 
+
+.sidemenu a.menu_closed {
+  display:block;
+  cursor:grab;
+}
+
+.sidemenu a.menu_open {
+  display:block;
+  cursor:grab;
+}
+
+.sidemenu div.menu_closed {
+  display:none;
+}
+
+.sidemenu div.menu_open {
+  display:block;
+}
+
+
+/* Menu for narrow screens */
+
+@media screen and (max-width:550px) {
+
+ #cms_top {
+   min-height:1px;
+ }
+
+ .topmenu {
+    width:98%;
+    margin:auto;
+    display:block; 
+ }
+
+ .topmenu a, .topmenu a.menu_dropdown, .topmenu a.menu_single {
+   position:relative;
+   display:block;
+   background:#444;
+   color:white;
+   margin: 10px;
+   text-align:center;   
+   font-size:20px;
+ }
+ 
+ .topmenu div {
+   width:96%; 
+   margin:2px auto;
+   background:#111;
+   padding:1px 0px;
+ }
+ 
+ a.menu_burger {display:inline-block;}
+ 
+}

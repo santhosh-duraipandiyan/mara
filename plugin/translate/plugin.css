@@ -1,0 +1,21 @@
+
+/* 
+translate/plugin.css
+These prevent the 'original text' popups from showing. 
+Enclose in comment markers if you want the popups to show. 
+Note that if you allow the popups you must NOT allow menu translation,
+otherwise the popups may overlay and block access to menus. 
+*/ 
+
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+

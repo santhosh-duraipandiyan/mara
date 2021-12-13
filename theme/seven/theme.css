@@ -1,0 +1,386 @@
+/* --- soft fonts --- */
+
+
+@font-face {
+    font-family: cms_sans;
+    src: url('font/PT_Sans-Web-Regular.ttf');
+    font-weight:normal;
+    font-style:normal;
+}    
+@font-face {
+    font-family: cms_sans;
+    src: url('font/PT_Sans-Web-Bold.ttf');
+    font-weight:bold;
+    font-style:normal;
+}    
+@font-face {
+    font-family: cms_sans;
+    src: url('font/PT_Sans-Web-Italic.ttf');
+    font-weight:normal;
+    font-style:italic;
+}    
+@font-face {
+    font-family: cms_sans;
+    src: url('font/PT_Sans-Web-BoldItalic.ttf');
+    font-weight:bold;
+    font-style:italic;
+}    
+
+/* --- global styles --- */
+
+BODY {
+  color:black; 
+  background-color:#555; 
+  font-family:Arial,sans-serif;  
+  margin : 0 0 0 0
+} 
+
+A {color:#0000ff; text-decoration:none; font-weight:normal;}
+A:hover {color:#00ffff;}
+A img {border:none;} /* Fix IE dotted outlines */
+
+/* --- Remove extraneous spacing from headers, optional but IMHO makes presentation much neater. --- */
+h1, h2, h3, h4, h5, h6 {margin-top:10px; margin-bottom:0px; color:#000070; font-variant:small-caps;}
+
+h1 { 
+  font-size:200%;
+  text-align:center;
+}
+
+/*  Deal with unruly content in editor which would tend to expand page beyond screen.. */
+img, pre {max-width:100%; overflow:hidden; text-overflow:ellipsis;}
+pre:hover {overflow:auto;}
+
+/* --- content panes --- */
+
+
+div.cms_pagecontainer{
+  display:block;
+  /* Main text and bg color for page */
+  background:#ffe;
+  color:black;
+  border:none;
+  padding:0px;
+  margin:0px auto;
+  max-width:1280px;
+  width:100%;
+  min-height:100%;
+}
+
+#cms_top{
+ display:table;
+ font-family:sans-serif;
+ background:black;
+ color:white;
+ width:100%;
+ vertical-align:middle;
+ padding: 12px 0px;
+ border: none;
+}
+
+#cms_topmenu {
+ /* Affects top menu container */
+ /* You could use the menutree class if there is only one menu */
+ display:table-cell;
+ text-align:left;
+ font-size:22px;
+ vertical-align:middle;
+ border:none;
+ background:none; 
+ letter-spacing:3px; 
+}
+
+#cms_topmenu div{
+  letter-spacing:1px;
+}
+
+#cms_widgets{
+  border:none;
+  display:table-cell;
+  text-align:right;
+  vertical-align:middle; 
+  padding-right:5px;
+}
+
+
+#cms_banner{
+  display:block;
+  background:#008;
+  margin:0px;
+  vertical-align:middle;
+  padding:10px;
+}
+
+#cms_midrow{
+ /* Necessary for 3-column pages. Not necessary here. */
+ display:table;
+}
+
+#cms_left, #cms_right {
+  /* Not used in this layout */
+  display:none;
+}
+
+#cms_content{
+ display:table-cell;
+ background:#ffd;
+ color:black;
+ font-family: cms_sans,Arial,sans-serif;
+ vertical-align:top;
+ text-align:justify;
+
+ padding:5px 10px ;
+ margin:0px;
+}
+
+
+#cms_bottom{
+  text-align:center;
+  vertical-align:middle;
+  padding:5px 0px 20px 0px;; 
+}
+
+.callout{
+color:#ffffff;
+font-size:10px;
+text-align:center;
+padding:4px 3% 4px 3%;
+margin:5%;
+border-radius:4px;
+background:#444;
+}
+
+/* Add any styles you need for the captioned image function. These are nonessential. */
+
+img.cms_captioned_img {
+}
+
+table.cms_captioned_img {
+}
+
+/* Image zoom functionality. These styles are nonessential, essential styles being in system.css */
+#cms_imgzoom_zdiv {
+  background-color: #000044;
+	border: 5px solid #000044;
+  border-bottom:0px;
+  border-radius: 5px ; 
+	padding: 0px;
+  opacity:1;
+  box-shadow: 4px 6px 5px #223;
+}
+
+#cms_imgzoom_zimage{
+    border:none;
+    border-radius: 5px; 
+}
+
+/* -- Menu styling -- */
+
+/* This gets complicated, but it allows for a huge range of menu styling options */
+/* There is no side menu in this theme, but the same css will work for one */
+
+
+.topmenu a{
+ /* Affects all clickable links and dropdowns, at all levels  */
+  color:white;
+  padding: 2px 14px;
+  vertical-align:middle;
+  outline:none;
+}
+
+.topmenu div {
+  /* Affects first-level dropdown container styling */
+  border:1px inset gray;
+  border-top:none;
+  color:white;
+  background:#111;
+  padding:2px;
+  margin-top:12px;
+  opacity:.9;
+}
+
+.topmenu div div {
+  /* Affects subsequent levels on multilevel menu */
+  border:none;
+  color:white;
+  background: #222;
+  padding-left:0px; /* Indent on sublevels, if required */
+  border-collapse:collapse;
+}
+
+.topmenu div div div{
+  /* Affects third and subsequent levels on multilevel menu */
+  border:none;
+  color:white;
+  background: #333;
+  padding-left:0px; /* Indent on sublevels, if required */
+  border-collapse:collapse;
+}
+
+
+.topmenu a.menu_dropdown, .topmenu a.menu_closed {
+  /*  Affects clickable items in top row */
+  background: url('menu_img/down.gif'); 
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-color:#111;
+}
+
+.topmenu div a.menu_dropdown {
+ /* Affects only the clickable submenus. */
+
+}
+
+
+/* Styling for links in specific circumstances */
+
+.topmenu a.menu_selected {
+  color:#8f8;
+}
+
+.topmenu div a.menu_open{
+  /* Changes arrow on opened sub menu */
+  background: url('menu_img/up.gif'); 
+  background-repeat:no-repeat;
+  background-position:right center;
+  border-top:1px ridge gray;
+  background-color:#272727;
+  padding-right:14px;
+}
+
+.topmenu div div a.menu_open{
+  /* Changes arrow on opened sub menu */
+  background: url('menu_img/up.gif'); 
+  background-repeat:no-repeat;
+  background-position:right center;
+  border-top:1px ridge gray;
+  background-color:#333;
+  padding-right:14px;
+}
+
+.topmenu a[href^=http]{
+ /* Indicates an offsite link (http or https URL) */
+  background: url('menu_img/out.gif'); 
+  background-repeat:no-repeat;
+  background-position:right center;
+  padding-right:14px;
+}
+
+.topmenu a.menu_dropdown:hover {
+  color:#ffffaa;
+  font-weight:normal;
+  background: url('menu_img/down.gif'); 
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  padding-right:14px;
+}
+
+.topmenu a.menu_closed:hover {
+  color:#ffffaa;
+}
+
+.topmenu a.menu_open:hover {
+  color:#ffffaa;
+}
+
+.topmenu a.menu_single:hover {
+  color:#ffffaa;
+}
+
+/* End of main dropdown menu styling */
+
+
+/* Widget (righthand menu bar buttons) styles */
+
+button.widget {
+  color:white;
+  font-weight:bold;
+}
+
+#thememenu a{
+  color:white;
+  font-size:12px;
+  vertical-align:middle;
+  margin: 0px 4px;
+  padding:1px 5px 4px 5px;
+}
+
+
+#thememenu a:hover{
+  color:white;
+  background:#666;
+  border-radius:3px;
+}
+
+#thememenu a.active_theme{
+ color:#8dd;
+}
+
+/* -- Responsive stuff -- */
+
+/* Set an overall max content-pane width on very wide displays, 
+   to avoid text lines too long for easy reading..  */
+
+@media screen and (min-width: 1600px) {
+ #cms_content{
+   max-width:1270px;
+ }
+}
+
+/* Make menus more compact on tiny screens.. */
+
+@media screen and (max-width: 600px) {
+ #cms_topmenu {
+   font-size:16px;
+ }
+}
+
+@media screen and (max-width: 800px) {
+
+  #cms_banner img{
+    width:50%;
+  }
+
+  .topmenu a.menu_dropdown, .topmenu a.menu_single {
+    /* top line of items in dropdown menu */
+    padding: 2px 8px;
+    padding-right:14px;
+  } 
+  .topmenu div {
+    /* Affects first-level dropdown container styling */
+    margin-top:3px;
+  }
+
+  #cms_topmenu {
+    display:table-row;
+    font-size:20px;
+    letter-spacing:1px;
+  }
+
+  #cms_widgets  {
+    /* Put widgets on next row instead of alongside menu */
+    display:table-row;
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 600px) {
+ #cms_topmenu {
+   font-size:16px;
+ }
+}
+
+
+/* Plugin styles */
+
+div.captcha { 
+ text-align:center;
+ padding:5px;
+ border-radius:5px;
+ background:#dddddd;
+ width:400px;
+}
+
+
+
+

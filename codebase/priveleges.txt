@@ -1,0 +1,19 @@
+5 Admin, unrestricted.
+4 Manager, create files anywhere, plus everything except user management.
+3 Editor, edit content and menus. 
+2 Author, create new files in default location. Upload images to default location. (Must ask Editor for menu additions.)    
+1 Copy Typist, change or add to existing files in default folder only.  
+0 read only.  
+
+Directory Permissions: 
+
+* or /* Site root and all subfolders. 
+/ edit files in site root only 
+
+img edit files in /img only, no subfolder rights. 
+img* edit files in img and all subfolders. 
+
+Permissions are separated by commas. 
+Permissions always apply from site root (no need for leading slash) 
+Note: Permissions have no effect on user categories 4 and 5. 
+

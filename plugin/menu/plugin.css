@@ -1,0 +1,107 @@
+/* Default page menu styles, minimal styling to ensure menus work even if theme has no css. */
+/* Please make any customisations in the theme.css, NOT here! -- */
+
+/* Burger menus (only active on small screens) */
+
+.menu_burger, menu_burger_clicked {
+  display:none;
+}
+
+/* Mainly for burger menu when hidden */
+.menu_show {
+  display:inline-block !important;
+}
+
+/* Top Menu */
+
+
+.topmenu {
+  position:relative;
+  display:inline-block;
+}
+
+.topmenu a {
+  text-decoration:none;
+  background-repeat:no-repeat;
+  display:block;  
+ } 
+
+.topmenu a.menu_dropdown, a.topmenu_single, .topmenu a.menu_single {
+  /* third item is for backward compatibility */
+  display:inline;
+ } 
+
+.topmenu a.menu_dropdown {
+  cursor:grab; 
+}
+
+.topmenu div.menu_dropdown {
+  display:none;
+  position:absolute;
+  z-index:999;
+ } 
+
+.topmenu a.menu_closed {
+  display:block;
+  cursor:grab;
+}
+
+.topmenu a.menu_open {
+  display:block;
+  cursor:grab;
+}
+
+.topmenu div.menu_closed {
+  display:none;
+}
+
+.topmenu div.menu_open {
+  display:block;
+}
+
+/* Side Menu  */
+
+.sidemenu div{
+  /* Sets indent depth for submenus */
+  margin-left:.5em;
+}
+
+.sidemenu a {
+  text-decoration:none;
+  background-repeat:no-repeat;
+  display:block;
+ } 
+
+.sidemenu a.menu_dropdown, a.sidemenu_single, .sidemenu a.menu_single {
+  display:inline;
+ } 
+
+.sidemenu a.menu_dropdown {
+  cursor:grab; 
+}
+
+.sidemenu div.menu_dropdown {
+  display:none;
+  position:absolute;
+  z-index:999;
+ } 
+
+.sidemenu a.menu_closed {
+  display:block;
+  cursor:grab;
+}
+
+.sidemenu a.menu_open {
+  display:block;
+  cursor:grab;
+}
+
+.sidemenu div.menu_closed {
+  display:none;
+}
+
+.sidemenu div.menu_open {
+  display:block;
+}
+
+

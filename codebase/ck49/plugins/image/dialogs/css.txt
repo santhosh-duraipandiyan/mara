@@ -1,0 +1,52 @@
+/* Image and span container styles for CK Image dialog */
+
+/* Style your caption text here. Note: display:table-cell; is mandatory. */
+span.caption-text {
+  display:table-cell;
+  margin:0px;
+  text-align:center;
+  font-size:small;
+  border:none;
+  width:100%;
+}
+
+/*  General styles for all non-default images. */
+/*  Put any custom css here.. */
+img.float-left, img.left, img.center, img.right, img.float-right {
+  margin:8px; 
+  display:block;
+  border:none;
+}
+/* Styles for outer container when caption is applied. Seldom need changing. */
+span.float-left, span.left, span.center, span.right, span.float-right {
+  display:table;
+  border-collapse:collapse;
+  width:100px;
+  margin:0px; 
+  border:none;
+  padding:0px;
+}
+/* Rest are necessary for correct editor action. */
+img.left, span.left {
+  margin-right:auto;
+}
+img.float-left, span.float-left {
+  float:left;
+}
+img.center, span.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+img.right, span.right {
+  margin-left:auto;
+}
+img.float-right, span.float-right {
+  float:right;
+}
+img.caption{
+  margin-bottom:0px;
+}
+img.caption-top{
+  margin-top:0px;
+}
+

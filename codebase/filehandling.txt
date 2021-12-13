@@ -1,0 +1,27 @@
+/*
+Are files attached? No need to check data. Always external. 
+file paste - copy/paste from explorer
+file drop - drag/drop 
+
+If it's data and NO files:
+
+If it's data of any kind and a drop method, always an internal move so allow to proceed without intervention. Unless src URL is absolute or javascript, in which case fix the url. 
+
+If it's data and a paste method, might be internal cut/paste or external paste. 
+
+data drop - internal move of an img
+data paste - internal paste of inline image
+data paste - external paste
+-No file elements, all data  
+Data can be a web path, OR a data:url 
+ 
+Data drop will never be external data? 
+
+*/
+
+var x= evt.data.dataValue;
+
+// alert (evt.data.type + '|' + evt.data.method + '|' + x.substr(0,50) + ' |' + evt.data.dataTransfer.getFilesCount());
+
+  var notification2 = editor.showNotification( 'Method used:'+ evt.data.method , 'info' );
+

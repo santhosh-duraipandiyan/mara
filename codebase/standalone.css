@@ -1,0 +1,17 @@
+/* --- A simple stylesheet for displaying pages directly in the browser --- */
+
+BODY {color:black; background-color:#ffffff; font-family:Arial,sans-serif;  margin : 30px} 
+A {color:#0000ff; text-decoration:none; font-weight:normal}
+A:hover {color:#00ffff}
+
+P {text-align:justify;}
+
+/* --- Remove extraneous spacing from headers, optional but IMHO makes presentation much neater. --- */
+H1 {margin-top:0px; margin-bottom:0px;}
+H2 {margin-top:0px; margin-bottom:0px;}
+H3 {margin-top:0px; margin-bottom:0px;}
+H4 {margin-top:0px; margin-bottom:0px;}
+H5 {margin-top:0px; margin-bottom:0px;}
+H6 {margin-top:0px; margin-bottom:0px;}
+
+

@@ -1,0 +1,90 @@
+
+#cms_content h3+p {
+ border: 1px solid gray;
+ border-radius: 10px;
+ padding:20px;
+ margin: 5px 10px;
+ background:#ffe;
+ color:black;
+}
+
+#cms_content h3{
+ display:inline-block; 
+ position:relative;
+ top:18px;
+ left:0px;
+ margin-left:24px;
+ margin-right:7px;
+ margin-bottom:8px;
+ padding: 2px 10px;
+ background:#ffe;
+ border-top:1px solid gray;
+ border-left:1px solid gray;
+ border-right:1px solid gray;
+ border-radius: 5px 5px 0px 0px;
+ border-spacing:0px;
+ border-collapse:collapse;
+ color:#000070;
+ width:initial;
+}
+
+#cms_content h1+p {
+ border: 1px solid gray;
+ border-radius: 6px;
+ font-size:24px;
+ padding:30px;
+ margin: 5px 30px;
+ background:#ffe;
+ color:black;
+}
+
+#cms_content h1{
+ display: inline-block;
+ text-align:center;
+ font-size:30px;
+ padding: 2px 15px 2px 15px;
+ background:#ffe;
+ color:#000070;
+ width:initial;
+ position:relative;
+ top:24px;
+ left:30%;
+ margin:0px;
+ border:1px solid gray;
+ border-radius:5px;
+}
+
+#cms_content div.vcol{
+  display:inline-block;
+  vertical-align:top;
+  width:45%;
+  padding: 20px 5px 20px 3% ;
+}
+
+@media screen and (max-width: 1000px) {
+ #cms_content h1{
+  left:22%;
+ }
+}
+
+@media screen and (max-width: 800px) {
+ #cms_content  div.vcol{
+   display:block;
+   width:auto;
+   padding:0px;
+ }
+
+ #cms_content h1{
+  font-size: 24px;
+  left:12%;
+ }
+
+ #cms_content  h1+p {
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size:20px;
+  padding:30px;
+  margin: 5px 10px;
+ }
+}
+

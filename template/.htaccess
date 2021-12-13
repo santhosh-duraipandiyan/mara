@@ -1,0 +1,11 @@
+
+Options -Multiviews -Indexes
+
+<Files "*.htm">
+  SetHandler application/x-httpd-php
+</Files>
+
+<Files "*.template">
+#  Uncomment line below to display templates as webpages instead of as source
+#  SetHandler application/x-httpd-php
+</Files>

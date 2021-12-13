@@ -1,0 +1,27 @@
+<?php include_once 'codebase/reflex.php' ?>
+<html>
+<head>
+   <TITLE>Template with headings, top menu and no sidebar</TITLE>
+   <META NAME="description"  CONTENT="Mara cms template">
+   <META NAME="keywords" CONTENT="Mara, cms">
+   <META NAME="cms_doctype" CONTENT="html">
+   <META NAME="cms_menu" CONTENT="top">
+   <META NAME="cms_hide" CONTENT="left, right">
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; utf-8">
+   <META NAME="GENERATOR" CONTENT="Mara cms">
+   <META NAME="Author" CONTENT="">
+</head>
+
+<body >
+<h1>Full Width Page</h1>
+<blockquote>
+This template generates a page which occupies the full browser width, and which uses a top dropdown menu. This occurs because the head section contains meta tags declaring no sidebars and a top menu. If you examine the source of the preview (right-click on it and select This frame>View source ) then you will see these tags. 
+<blockquote><pre>
+   &lt;META NAME="cms_menu" CONTENT="top"&gt;
+   &lt;META NAME="cms_hide" CONTENT="left, right"&gt;
+</pre></blockquote>
+</blockquote>
+A fullwidth style is typically useful where you have content to display which would not fit comfortably into the standard page with sidebars. 
+Fullwidth will of course have no effect if you are using a theme without sidebars. 
+</body>
+</html>

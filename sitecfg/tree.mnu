@@ -1,0 +1,9 @@
+Site Map=sitemap.php=Automatically generated list of site pages in plain HTML format, ideal for screen readers and text devices. 
++[Sample Pages  
+  Home=index.php=The home page
+  About=about.php=About this version
+  Test Page=lorem.php=Try the editor. Use 'admin' and 'changeme'
+  Contact Us=contact.php=Configure your contact page 
+  Gallery=gallery.php=A sample image gallery for you to populate with images
+  Blog=blog/index.php=An example of blogging mode 
+]

@@ -1,0 +1,42 @@
+## An example .htaccess file for Mara cms.
+## None of these options are esssential for a basic site, but some may be advantageous in specific circumstances. 
+## Comments are denoted by ##, deactivated settings by #. Remove the single # to activate the setting.  
+
+## Uncomment for extensionless URLs:
+
+## Options +Multiviews -Indexes
+
+## (Turn the Multiviews config option on too if you use this)
+
+<FilesMatch "\.(htm|html)$">
+## Treat ordinary webpages as php: 
+## -Necessary if you wish to use .htm or .html file extensions for your pages.
+## (On by default as it seldom causes any issues) 
+
+  SetHandler application/x-httpd-php
+
+##  On some servers, the handler must instead be as below:
+
+#  AddHandler fcgid-script .htm
+
+</FilesMatch>
+
+## Automatic reflex loading on an Apache-module based php installation: 
+
+# php_value auto_prepend_file codebase/reflex.php
+
+## Warning: Activating the above on a CGI-based server will CRASH the site with a '500' Error. Hence, commented-out by default.
+## On CGI servers, the auto_prepend setting is either in php.ini or .user.ini
+
+
+## For friendly error messages (see documentation): 
+
+# ErrorDocument 403 /.error.php?err=403&noadmin
+# ErrorDocument 404 /.error.php?err=404&noadmin
+
+## Might occasionally be needed if software in a parent directory turns on rewriting: 
+
+# <IfModule mod_rewrite.c>
+#	SetEnv HTTP_MOD_REWRITE Off
+#	RewriteEngine Off
+# </IfModule>
